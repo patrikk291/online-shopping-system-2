@@ -16,13 +16,13 @@ Mereka mewarisi atribut umum dari Product dan menambahkan atribut spesifik:
 Electronics dan Clothing mengimplementasikan interface Discountable.
 
 **5. Struktur Direktori**
-1. Product.java → Kelas induk produk (abstract)
-2. Electronics.java → Subclass dengan inner class + implementasi Discountable
-3. Clothing.java → Subclass menggunakan enum Size + implementasi Discountable
-4. Size.java → Enum ukuran
-5. Discountable.java → Interface diskon
-6. ShoppingCart.java → Menyimpan dan menampilkan isi belanja
-7. MainApp.java → Menjalankan program dan menerima input user
+1. Product.java = Kelas induk produk (abstract)
+2. Electronics.java = Subclass dengan inner class + implementasi Discountable
+3. Clothing.java = Subclass menggunakan enum Size + implementasi Discountable
+4. Size.java = Enum ukuran
+5. Discountable.java = Interface diskon
+6. ShoppingCart.java = Menyimpan dan menampilkan isi belanja
+7. MainApp.java = Menjalankan program dan menerima input user
 
 **ANGGOTA KELOMPOK**
 1. Nizar Awaludin (51424044)
