@@ -4,7 +4,7 @@ Di dalamnya, dua objek dibuat:
 1. Satu objek dari kelas Electronics
 2. Satu objek dari kelas Clothing
 
-**2. Penggunaan Constructor dan Encapsulation**
+**2. Encapsulation**
 Setiap objek dibuat dengan memanggil konstruktor yang mengisi atribut seperti name, price, dan productId.
 Semua atribut bersifat private (enkapsulasi) dan hanya dapat diakses melalui method get dan set.
 
@@ -12,7 +12,7 @@ Semua atribut bersifat private (enkapsulasi) dan hanya dapat diakses melalui met
 Kelas Electronics dan Clothing merupakan subclass dari Product.
 Mereka mewarisi atribut umum dari Product dan menambahkan atribut spesifik:
 
-**4. Polymorphism & Interface**
+**4. Polymorphism**
 Electronics dan Clothing mengimplementasikan interface Discountable.
 
 **5. Struktur Direktori**
