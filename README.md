@@ -34,4 +34,7 @@ Electronics dan Clothing mengimplementasikan interface Discountable.
 
 ### ANGGOTA KELOMPOK
 1. Nizar Awaludin (51424044)
+2. Muhammad Hasan Fahri G
+3. Rayhan Alfa Rezel
+4. Rizq Zinadine
 
