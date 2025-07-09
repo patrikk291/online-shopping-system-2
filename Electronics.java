@@ -1,9 +1,12 @@
-public class Electronics extends Product implements Discountable {
-    private Specification spec;
+import java.text.DecimalFormat; //
 
-    public Electronics(String name, double price, String brand, double weight) {
-        super(name, price);
-        this.spec = new Specification(weight, brand);
+public class Electronics extends Product implements Discountable {
+    private Specification specification;
+    private static final DecimalFormat df = new DecimalFormat("#,##0.00"); // Untuk format berat
+
+    public Electronics(int id, String name, double price, double weight, String brand) { // Menambahkan ID
+        super(id, name, price, "Electronics"); //
+        this.specification = new Specification(weight, brand);
     }
 
     @Override
@@ -17,15 +20,27 @@ public class Electronics extends Product implements Discountable {
     }
 
     @Override
-    public void displayDetails() {
-        System.out.println("Nama Produk: " + name);
-        System.out.println("Kategori: " + getCategory());
-        System.out.println("Harga: Rp" + price);
-        System.out.println("Spesifikasi: " + spec.getSpecs());
-        System.out.println("Tanggal Dibuat: " + createdAt);
+    public double calculateFinalPrice() {
+        // Untuk Elektronik, diasumsikan tidak ada pajak tambahan atau perhitungan kompleks untuk saat ini
+        return getPrice(); //
     }
 
-    // Inner Class
+    @Override
+    public String getProductInfo() {
+        // Merapikan format output untuk tabel di ProductManager
+        return String.format("%-5d | %-20s | %-12s | %-15s | %-40s | %s",
+                getId(),
+                getName(),
+                Product.formatRupiah(getPrice()), // Menggunakan formatRupiah untuk harga asli
+                getCategory(),
+                specification.getSpecs(), // Menggunakan getSpecs() untuk detail brand dan weight
+                Product.formatRupiah(calculateFinalPrice())); // Menggunakan formatRupiah untuk harga final
+    }
+
+    public Specification getSpecification() {
+        return specification;
+    }
+
     public class Specification {
         private double weight;
         private String brand;
@@ -36,7 +51,16 @@ public class Electronics extends Product implements Discountable {
         }
 
         public String getSpecs() {
-            return brand + ", " + weight + " kg";
+            // Merapikan format di sini juga agar lebih mudah dibaca di output
+            return "Brand: " + brand + ", Berat: " + df.format(weight) + " kg"; //
+        }
+
+        public double getWeight() {
+            return weight;
+        }
+
+        public String getBrand() { // Menambahkan getter untuk brand agar bisa diakses jika diperlukan
+            return brand;
         }
     }
 }
