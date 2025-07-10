@@ -33,4 +33,4 @@ Proyek ini terdiri dari beberapa kelas Java yang diorganisir sebagai berikut:
 1. Celvin Saputra
 2. Nizar Awaludin
 
-**Lisensi:** [Opsional: Contoh: MIT License, atau tinggalkan jika tidak ada lisensi spesifik]
+
